@@ -576,7 +576,7 @@ function getElementBehindPoint (point, x, y) {
     var maybeElem;
     while (el && el.shadowRoot) {
       maybeElem = el.shadowRoot.elementFromPoint(x, y);
-      if (maybeElem) {
+      if (maybeElem && el != maybeElem) {
         el = maybeElem;
       } else {
         return el;
